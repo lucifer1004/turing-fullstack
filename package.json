@@ -1,4 +1,5 @@
 {
+  "name": "turing-fullstack",
   "private": true,
   "scripts": {
     "format": "prettier --write 'api/{src,test}/**/*.ts' 'app/src/**/*.{ts,tsx}'"
