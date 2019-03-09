@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "packages": ["api", "app"],
+  "command": {
+    "version": {
+      "allowBranch": ["master", "next"],
+      "exact": true,
+      "gitRemote": "origin",
+      "message": "chore(release): %s"
+    }
+  },
+  "ignoreChanges": ["**/__tests__/**", "**/*.md"],
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}
