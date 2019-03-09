@@ -2,7 +2,15 @@
   "name": "turing-fullstack",
   "private": true,
   "scripts": {
-    "format": "prettier --write 'api/{src,test}/**/*.ts' 'app/src/**/*.{ts,tsx}'"
+    "format": "prettier --write 'api/{src,test}/**/*.ts' 'app/src/**/*.{ts,tsx}'",
+    "test:api": "cd api && yarn test",
+    "test:app": "cd app && yarn test --no-watch",
+    "test": "yarn test:api && yarn test:app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && lint-staged"
+    }
   },
   "devDependencies": {
     "husky": "^1.3.1",
